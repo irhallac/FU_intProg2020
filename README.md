@@ -1,2 +1,2 @@
-# FU_intProg2020-
+# Fırat Üniversitesi Bilgisayar Mühendisliği 
 İnternet Programlama Dersi Lab Uygulamaları
