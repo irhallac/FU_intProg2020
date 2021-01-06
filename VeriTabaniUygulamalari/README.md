@@ -1,27 +1,27 @@
-SQL 
+SQL </br>
 
 Structured Query Language
 
 </br></br>
 
-SEQUEL
+SEQUEL </br>
 
 Structured English Query Language  -  IBM (1970)
 
 </br></br>
 
-MySQL
-Microsoft SQL Server
-PostgreSQL
-SQLite
+MySQL </br>
+Microsoft SQL Server </br>
+PostgreSQL </br>
+SQLite </br>
 
 https://netbeans.org/kb/docs/ide/java-db.html
 
 </br></br>
 
-select * from APP.PRODUCT
+select * from APP.PRODUCT </br>
 
-select CUSTOMER_ID, NAME, CITY, STATE from APP.CUSTOMER order by CUSTOMER_ID
+select CUSTOMER_ID, NAME, CITY, STATE from APP.CUSTOMER order by CUSTOMER_ID </br>
 
 </br></br>
 
@@ -56,60 +56,60 @@ isim, doğum tarihi, meslek
 
 
 </br></br>
-insert into VATANDAS values('Ahmet Akça', 1953, 'Emekli')
-insert into VATANDAS values('Şengül Özer', 1990, 'Doktor')
-
-</br></br></br></br>
-
-1- Veri tabanı bağlantısı = Connection
-2- İfade oluştur = Statement
-3- Sorgu oluştur = Query
-4- Sonucu işle = ResultSet
-</br></br></br></br>
-//1. aşama: bağlantı
-Connection conn = DriverManager.getConnection(connectionURL, "kullanici", "sifre");
-System.out.println("Bağlantı kuruldu! ");
-//2. aşama statement nesnesi
-Statement stmt = conn.createStatement();
-//3. aşama query: sorgu oluşturma
-String sorgu = "select * from VATANDAS";
-//4. aşama ResultSet: sonuçların okunması
-ResultSet rs = stmt.executeQuery(sorgu);
+insert into VATANDAS values('Ahmet Akça', 1953, 'Emekli') </br>
+insert into VATANDAS values('Şengül Özer', 1990, 'Doktor') </br>
 
 </br></br>
-rs.getString()  method
-</br></br></br></br>
-ResultSetMetaData object
-    ColumnCount
-    ColumnName
-    ColumnTypeName
+
+1- Veri tabanı bağlantısı = Connection </br>
+2- İfade oluştur = Statement </br>
+3- Sorgu oluştur = Query </br>
+4- Sonucu işle = ResultSet </br>
+</br></br></br>
+//1. aşama: bağlantı</br>
+Connection conn = DriverManager.getConnection(connectionURL, "kullanici", "sifre");</br>
+System.out.println("Bağlantı kuruldu! ");</br>
+//2. aşama statement nesnesi </br>
+Statement stmt = conn.createStatement(); </br>
+//3. aşama query: sorgu oluşturma </br>
+String sorgu = "select * from VATANDAS"; </br>
+//4. aşama ResultSet: sonuçların okunması </br>
+ResultSet rs = stmt.executeQuery(sorgu); </br>
+
+</br></br>
+rs.getString()  method </br>
+</br></br></br>
+ResultSetMetaData object </br>
+    ColumnCount </br>
+    ColumnName </br>
+    ColumnTypeName </br>
 
 
-</br></br></br></br>
+</br></br></br>
 JDBC üzerinden veri ekleme:
 </br></br>
 insert into VATANDAS values('Hasan Adıyaman', 2009, 'Öğrenci')
 
 </br></br></br></br>
-boolean execute(): Her türlü SQL ifadesi
+boolean execute(): Her türlü SQL ifadesi </br>
 
-ResultSet executeQuery(): SELECT
+ResultSet executeQuery(): SELECT </br>
 
-int executeUpdate():  INSERT, UPDATE veya DELETE
+int executeUpdate():  INSERT, UPDATE veya DELETE </br>
 
 
-</br></br></br></br>
+</br></br></br>
 Web Uygulaması : JspDbApp
 
-Package com.db
+Package com.db </br>
 
-	DbIslemleri.java
-		baglan()
-	sayfa1.jsp
+	DbIslemleri.java </br>
+		baglan() </br>
+	sayfa1.jsp </br>
 
 </br></br>	 
-	uyg1.java
-		vatandasBilgileri()
-	sayfa2.jsp
-		musteriBilgileri()
-	sayfa3.jsp
+	uyg1.java </br>
+		vatandasBilgileri() </br>
+	sayfa2.jsp </br>
+		musteriBilgileri() </br>
+	sayfa3.jsp </br>
